@@ -1,0 +1,25 @@
+use student;
+select * from student;
+select * from student limit 5;
+select * from student where gender = 'Male';
+select * from student where first_name like "%e";
+select * from student where first_name like "Sh%";
+select * from student where first_name like "S";
+select * from student where id between 1 And 50;
+select * from student where id between 1 And 50 order by last_name desc;
+
+update student
+SET first_name = "Suraj"
+WHERE  id = 8 ;
+
+delete from student
+WHERE id = 2 ;
+
+select * from student where gender = "Male" AND first_name like "S%";
+select * from student where gender = "Male" OR first_name like "S%";
+select * from employee;
+select min(salary) from employee;
+select max(salary) from employee AS minimum;
+select avg(salary) from employee as average;
+
+select * from employee order by age desc limit 1 offset 2;
